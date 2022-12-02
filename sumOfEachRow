@@ -1,0 +1,13 @@
+function sumOfArray(arr) {
+    return arr.reduce((accumulator, current) => accumulator += current, 0);
+}
+
+exports.sumOfEachRow = function (mat) {
+    let result = [];
+
+    mat.forEach(row => {
+        result.push(sumOfArray(row));
+    })
+
+    return result;
+}

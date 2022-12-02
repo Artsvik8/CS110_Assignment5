@@ -1,0 +1,21 @@
+exports.matrixProduct = function (mat1, mat2) {
+    const rowCountM1 = mat1.length,
+        columnCountM1 = mat1[0].length,
+        columnCountM2 = mat2.length;
+
+    let product = [];
+
+    for (let i = 0; i < rowCountM1; i++) {
+        let row = [];
+        for (let j = 0; j < columnCountM1; j++) {
+            let accumulator = 0;
+            for (let k = 0; k < columnCountM2; k++) {
+                accumulator += mat1[i][k] * mat2[k][j]
+            }
+            row.push(accumulator);
+        }
+        product.push(row);
+    }
+
+    return product;
+}

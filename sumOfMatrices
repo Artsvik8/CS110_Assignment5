@@ -1,0 +1,16 @@
+exports.sumOfMatrices = function (mat1, mat2) {
+    const rowCountM1 = mat1.length,
+        columnCountM1 = mat1[0].length;
+
+    let sum = [];
+
+    for (let i = 0; i < rowCountM1; i++) {
+        let row = [];
+        for (let j = 0; j < columnCountM1; j++) {
+            row.push(mat1[i][j] + mat2[i][j]);
+        }
+        sum.push(row);
+    }
+
+    return sum;
+}

@@ -1,0 +1,7 @@
+const utils = require('./utils.js'),
+    readlineSync = require('readline-sync');
+
+let userInput = readlineSync.question('Enter your sentence: ');
+
+console.log(`Trimmed output is: ${utils.trim(userInput)}`);
+console.log(`Word count is: ${utils.conutWords(userInput)}`);

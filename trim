@@ -1,0 +1,22 @@
+exports.trim = function (input) {
+    let sliceCountLeft = 0,
+        sliceCountRight = 0;
+
+    for (let i = 0; i < input.length; i++) {
+        if (input[i].charCodeAt(0) == 32) {
+            sliceCountLeft++;
+        } else {
+            break;
+        }
+    }
+
+    for (let i = input.length - 1; i >= 0; i--) {
+        if (input[i].charCodeAt(0) == 32) {
+            sliceCountRight++;
+        } else {
+            break;
+        }
+    }
+
+    return input.slice(sliceCountLeft, input.length - sliceCountRight);
+}

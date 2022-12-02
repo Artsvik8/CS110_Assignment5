@@ -1,0 +1,3 @@
+exports.countWords = function (input) {
+    return input.split(' ').filter(word => word.length > 0).length;
+}
